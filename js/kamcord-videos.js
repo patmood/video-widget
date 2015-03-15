@@ -52,7 +52,8 @@
       this.el.find('.vid-container').append($template)
       $template.find('.preview')
               .css('background-image', 'url(' + thumb + ')')
-              .one('click', vid, this.playVid)
+              .one('click', vid, this._playVid)
+      return this
     },
 
     render: function() {
@@ -61,23 +62,14 @@
       this.feed.forEach(function(video) {
         _this.addVideo(video)
       })
-    },
-
-    playVid: function(e) {
-      var url = e.data.video_urls.encoded[0].url
-        , vidTemplate =
-        '<div class="fill-video">' +
-          '<video class="player" controls autoplay muted>' +
-            '<source src=' + url + '>Browser not supported :('
-          '</video>' +
-        '</div>'
-      $(this).html(vidTemplate)
+      return this
     },
 
     getFeed: function(page) {
       // Normally do GET request here
       this.feed = window.API['page' + page].response.feed_info
       this.render()
+      return this
     },
 
     nextPage: function() {
@@ -91,6 +83,17 @@
       var minutes = Math.floor(totalSeconds / 60)
         , seconds = Math.round(totalSeconds % 60)
       return minutes + ':' + seconds
+    },
+
+    _playVid: function(e) {
+      var url = e.data.video_urls.encoded[0].url
+        , vidTemplate =
+        '<div class="fill-video">' +
+          '<video class="player" controls autoplay muted>' +
+            '<source src=' + url + '>Browser not supported :('
+          '</video>' +
+        '</div>'
+      $(this).html(vidTemplate)
     },
 
     _setContainers: function() {
