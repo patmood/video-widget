@@ -61,7 +61,6 @@
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-
 }
 
 .kamcord-videos .vid-box .preview video {
@@ -92,8 +91,12 @@
 }
 
 .kamcord-videos .vid-box .game-icon img {
-  width: 100%
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
+
 .kamcord-videos .vid-box .title {
   font-size: 12px;
   font-weight: bold;
