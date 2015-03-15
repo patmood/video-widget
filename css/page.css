@@ -3,7 +3,17 @@ body {
   font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+h1, h2 {
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+  color: #669DD1;
+}
+
 .container {
+  width: 100%;
   max-width: 900px;
   margin: auto;
 }

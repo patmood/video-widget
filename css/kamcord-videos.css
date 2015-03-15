@@ -31,33 +31,39 @@
 }
 
 .kamcord-videos .vid-box .details {
-  padding: 5px;
-  width: 100%;
-  overflow: auto;
-}
-
-.kamcord-videos .vid-box .game-icon {
-  /*TODO: make avatar resize;*/
-  float: left;
-  width: 40px;
-}
-
-.kamcord-videos .vid-box .stats {
-  float: left;
   font-size: 12px;
-  width: (100% - 40px);
-}
-
-.kamcord-videos .vid-box .stats .title, .kamcord-videos .vid-box a {
+  padding: 5px 5px 0 5px;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #669DD1;
-  text-decoration: none;
-  font-weight: bold;
 }
 
-.kamcord-videos .vid-box .stats .info {
+.kamcord-videos .vid-box .game-icon {
+  float: left;
+  width: 40px;
+  padding: 3px;
+}
+
+.kamcord-videos .vid-box .game-icon img {
+  width: 100%
+}
+.kamcord-videos .vid-box .title {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  line-height: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kamcord-videos .vid-box .title a {
+  text-decoration: none;
+  color: #669DD1;
+}
+
+.kamcord-videos .vid-box .info {
+  padding: 5px;
   color: #C6C6C6;
 }
 

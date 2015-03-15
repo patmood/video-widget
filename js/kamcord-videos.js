@@ -25,18 +25,16 @@
           '</div>' +
           '<div class="details shadow">' +
             '<div class="game-icon">' +
-              '<img src="http://placekitten.com/g/32/32">' +
+              '<img src="http://placekitten.com/g/64/64">' +
             '</div>' +
-            '<div class="stats">' +
-              '<div class="title">' +
-                '<a href=' + vid.video_watch_page + ' target="_blank">' +
-                  vid.title +
-                '</a>' +
-              '</div>' +
-              '<div class="info">' +
-                vid.display_list_info[0][0] + ' - ' + vid.display_list_info[0][1] +
-              '</div>' +
+            '<div class="title">' +
+              '<a href=' + vid.video_watch_page + ' target="_blank">' +
+                vid.title +
+              '</a>' +
             '</div>' +
+            '<span class="info">' +
+              vid.display_list_info[0][0] + ' - ' + vid.display_list_info[0][1] +
+            '</span>' +
           '</div>' +
         '</div>'
 
