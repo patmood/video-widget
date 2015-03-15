@@ -22,6 +22,9 @@
         , templateHTML =
         '<div class="vid-box">' +
           '<div class="preview shadow">' +
+            '<div class="duration">' +
+              this._calculateDuration(vid.duration) +
+            '</div>' +
           '</div>' +
           '<div class="details shadow">' +
             '<div class="game-icon">' +
@@ -68,6 +71,12 @@
     getFeed: function(page) {
       // Normally do GET request here
       return this.feed = window.API['page' + page].response.feed_info
+    },
+
+    _calculateDuration: function(totalSeconds) {
+      var minutes = Math.floor(totalSeconds / 60)
+        , seconds = Math.round(totalSeconds % 60)
+      return minutes + ':' + seconds
     }
 
   }
