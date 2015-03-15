@@ -133,3 +133,16 @@
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
+
+/* Media queries */
+@media (max-width: 700px) {
+  .kamcord-videos .vid-box {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 500px) {
+  .kamcord-videos .vid-box {
+    width: 100%;
+  }
+}
