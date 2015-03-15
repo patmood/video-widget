@@ -8,9 +8,10 @@
     }, options)
 
     this.el = el
-    this.getFeed(0)
+    this.page = 0
+    this._setContainers()
+    this.getFeed(this.page)
 
-    this.addFeed()
 
     // add handlers
   }
@@ -47,14 +48,14 @@
           '</div>' +
         '</div>'
 
-      var template = $().add(templateHTML)
-      this.el.append(template)
-      template.find('.preview')
+      var $template = $(templateHTML)
+      this.el.find('.vid-container').append($template)
+      $template.find('.preview')
               .css('background-image', 'url(' + thumb + ')')
               .one('click', vid, this.playVid)
     },
 
-    addFeed: function() {
+    render: function() {
       if (!this.feed.length) return
       var _this = this
       this.feed.forEach(function(video) {
@@ -75,13 +76,30 @@
 
     getFeed: function(page) {
       // Normally do GET request here
-      return this.feed = window.API['page' + page].response.feed_info
+      this.feed = window.API['page' + page].response.feed_info
+      this.render()
+    },
+
+    nextPage: function() {
+      console.log ('next page')
+      this.page += 1
+      this.getFeed(this.page)
+      return this
     },
 
     _calculateDuration: function(totalSeconds) {
       var minutes = Math.floor(totalSeconds / 60)
         , seconds = Math.round(totalSeconds % 60)
       return minutes + ':' + seconds
+    },
+
+    _setContainers: function() {
+      var $containers = $(
+        '<div class="vid-container"></div>' +
+        '<div class="load-more shadow">Load More...</div>'
+      )
+      this.el.append($containers)
+      this.el.find('.load-more').on('click', this.nextPage.bind(this))
     }
 
   }
