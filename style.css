@@ -38,7 +38,7 @@ body {
   overflow: auto;
 }
 
-.kamcord-videos .vid-box .avatar {
+.kamcord-videos .vid-box .game-icon {
   /*TODO: make avatar resize;*/
   float: left;
   width: 15%;
@@ -48,6 +48,19 @@ body {
   float: left;
   font-size: 12px;
   width: 80%;
+}
+
+.kamcord-videos .vid-box .stats .title, .kamcord-videos .vid-box a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #669DD1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.kamcord-videos .vid-box .stats .info {
+  color: #C6C6C6;
 }
 
 .kamcord-videos .shadow {

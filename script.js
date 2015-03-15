@@ -24,15 +24,17 @@
           '<div class="preview shadow">' +
           '</div>' +
           '<div class="details shadow">' +
-            '<div class="avatar">' +
+            '<div class="game-icon">' +
               '<img src="http://placekitten.com/g/32/32">' +
             '</div>' +
             '<div class="stats">' +
               '<div class="title">' +
-                vid.title +
+                '<a href=' + vid.video_watch_page + ' target="_blank">' +
+                  vid.title +
+                '</a>' +
               '</div>' +
               '<div class="info">' +
-                vid.display_list_info[0][0] + ' - ' + vid.display_list_info[0][1]
+                vid.display_list_info[0][0] + ' - ' + vid.display_list_info[0][1] +
               '</div>' +
             '</div>' +
           '</div>' +
