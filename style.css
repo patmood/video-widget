@@ -1,0 +1,49 @@
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.kamcord-videos *, .kamcord-videos *:before, .kamcord-videos *:after {
+  -webkit-box-sizing: border-box;
+  -mox-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.kamcord-videos {
+  overflow: auto
+}
+
+.kamcord-videos .vid-box {
+  width: calc(100% / 3);
+  float: left;
+  padding: 10px 20px 10px 0;
+}
+
+.kamcord-videos .vid-box .preview {
+  height: 0px;
+  padding-bottom: 50%;
+  background-size: cover;
+}
+
+.kamcord-videos .vid-box .details {
+  padding: 5px;
+  width: 100%;
+  overflow: auto;
+}
+
+.kamcord-videos .vid-box .avatar {
+  /*TODO: make avatar resize;*/
+  float: left;
+  width: 15%;
+}
+
+.kamcord-videos .vid-box .stats {
+  float: left;
+  font-size: 12px;
+  width: 80%;
+}
+
+.kamcord-videos .shadow {
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
