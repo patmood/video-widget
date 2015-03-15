@@ -22,12 +22,24 @@
   position: relative;
 }
 
+.kamcord-videos .vid-box .preview .interaction {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: #fff;
+  font-size: 10px;
+  display: none;
+}
+
+.kamcord-videos .vid-box .preview:hover .interaction {
+  display: block;
+}
+
 .kamcord-videos .vid-box .preview .duration {
   position: absolute;
   right: 5px;
   bottom: 5px;
   background: rgba(70, 72, 82, 0.9);
-  display: inline-block;
   padding: 3px;
   font-size: 10px;
   color: #ccc;

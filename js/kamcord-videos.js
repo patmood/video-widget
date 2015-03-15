@@ -22,6 +22,10 @@
         , templateHTML =
         '<div class="vid-box">' +
           '<div class="preview shadow">' +
+            '<div class="interaction">' +
+              vid.interaction_counts.likes + ' likes<br>' +
+              vid.interaction_counts.comments + ' comments' +
+            '</div>' +
             '<div class="duration">' +
               this._calculateDuration(vid.duration) +
             '</div>' +
