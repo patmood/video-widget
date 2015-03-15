@@ -2,15 +2,19 @@
 <html>
 <head>
   <title>Kamcord Video Widget</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/page.css">
+  <link rel="stylesheet" type="text/css" href="css/kamcord-videos.css">
 </head>
 <body>
   <h1>Kambord Video Widget</h1>
   <h2>By <a href="http://patmoody.com">Patrick Moody</a></h2>
-  <div class="kamcord-videos"></div>
-  <hr>
+  <div class="container">
+    <div class="kamcord-videos"></div>
+    <hr>
+    <!-- <div class="kamcord-videos"></div> -->
 
-  <!-- <div class="kamcord-videos">  </div> -->
+  </div>
+
 
   <h2>TODO</h2>
   <ul>
@@ -18,12 +22,14 @@
     <li>Styling</li>
     <li>Pagination</li>
     <li>Media queries</li>
+    <li>Hover play button</li>
+    <li>Hover shows comments and likes</li>
   </ul>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="page1.js"></script>
-  <script src="script.js"></script>
+  <script src="js/page1.js"></script>
+  <script src="js/kamcord-videos.js"></script>
   <script>
 
     $(document).ready(function() {

@@ -58,12 +58,13 @@
     playVid: function(e) {
       var url = e.data.video_urls.encoded[0].url
         , vidTemplate =
-        // '<div class="fill-video">' +
+        '<div class="fill-video">' +
           '<video controls autoplay muted class="player">' +
             '<source src=' + url + '>Browser not supported :('
           '</video>' +
-        // '</div>'
+        '</div>'
       $(this).html(vidTemplate)
+
     },
 
     getFeed: function(page) {
