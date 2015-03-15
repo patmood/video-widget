@@ -6,7 +6,8 @@
 }
 
 .kamcord-videos {
-  overflow: auto
+  overflow: auto;
+  background-color: #fff;
 }
 
 .kamcord-videos .vid-box {
@@ -64,6 +65,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
 }
 
 .kamcord-videos .vid-box .game-icon {
