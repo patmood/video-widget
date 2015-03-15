@@ -40,7 +40,9 @@
 
       var template = $().add(templateHTML)
       this.el.append(template)
-      template.find('.preview').css('background-image', 'url(' + thumb + ')')
+      template.find('.preview')
+              .css('background-image', 'url(' + thumb + ')')
+              .one('click', vid, this.playVid)
     },
 
     addFeed: function() {
@@ -49,6 +51,17 @@
       this.feed.forEach(function(video) {
         _this.addVideo(video)
       })
+    },
+
+    playVid: function(e) {
+      var url = e.data.video_urls.encoded[0].url
+        , vidTemplate =
+        // '<div class="fill-video">' +
+          '<video controls autoplay muted class="player">' +
+            '<source src=' + url + '>Browser not supported :('
+          '</video>' +
+        // '</div>'
+      $(this).html(vidTemplate)
     },
 
     getFeed: function(page) {

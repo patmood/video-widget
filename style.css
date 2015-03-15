@@ -22,6 +22,14 @@ body {
   height: 0px;
   padding-bottom: 50%;
   background-size: cover;
+  position: relative;
+}
+
+.kamcord-videos .vid-box .preview video {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 
 .kamcord-videos .vid-box .details {
