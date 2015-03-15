@@ -2,12 +2,13 @@
 
   var KamcordVideos = function(el, options) {
     var settings = $.extend({
-      autoplay: false
+      autoplay: true,
+      muted: true,
+      showControls: true
     }, options)
 
     this.el = el
-
-    var feedInfo = this.getFeed(1)
+    this.getFeed(0)
 
     this.addFeed()
 
@@ -65,12 +66,11 @@
       var url = e.data.video_urls.encoded[0].url
         , vidTemplate =
         '<div class="fill-video">' +
-          '<video controls autoplay muted class="player">' +
+          '<video class="player" controls autoplay muted>' +
             '<source src=' + url + '>Browser not supported :('
           '</video>' +
         '</div>'
       $(this).html(vidTemplate)
-
     },
 
     getFeed: function(page) {
