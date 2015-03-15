@@ -11,8 +11,6 @@
 
     this.addFeed()
 
-    var template = this.addVideo(feedInfo[3])
-
     // add handlers
   }
 
@@ -40,10 +38,9 @@
           '</div>' +
         '</div>'
 
-      var template =
+      var template = $().add(templateHTML)
       this.el.append(template)
-      console.log(thumb)
-      this.el.find('.preview').css('background-image', 'url(' + thumb + ')')
+      template.find('.preview').css('background-image', 'url(' + thumb + ')')
     },
 
     addFeed: function() {
