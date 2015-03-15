@@ -7,7 +7,6 @@
 
 .kamcord-videos {
   overflow: auto;
-  background-color: #fff;
 }
 
 .kamcord-videos .vid-box {
@@ -32,7 +31,22 @@
   display: none;
 }
 
-.kamcord-videos .vid-box .preview:hover .interaction {
+.kamcord-videos .vid-box .preview .play-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgba(70, 72, 82, 0.45),
+      rgba(70, 72, 82, 0.45)
+    ),
+    url('../img/play.png')
+    no-repeat center;
+  display: none;
+}
+
+.kamcord-videos .vid-box .preview:hover .interaction,
+.kamcord-videos .vid-box .preview:hover .play-overlay {
   display: block;
 }
 
@@ -60,6 +74,7 @@
 
 .kamcord-videos .vid-box .details {
   font-size: 12px;
+  background-color: #fff;
   padding: 5px 5px 0 5px;
   width: 100%;
   white-space: nowrap;
@@ -90,7 +105,7 @@
 
 .kamcord-videos .vid-box .title a {
   text-decoration: none;
-  color: #669DD1;
+  color: #468aca;
 }
 
 .kamcord-videos .vid-box .info {

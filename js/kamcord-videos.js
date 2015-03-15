@@ -22,6 +22,7 @@
         , templateHTML =
         '<div class="vid-box">' +
           '<div class="preview shadow">' +
+            '<div class="play-overlay"></div>' +
             '<div class="interaction">' +
               vid.interaction_counts.likes + ' likes<br>' +
               vid.interaction_counts.comments + ' comments' +
