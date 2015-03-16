@@ -11,9 +11,6 @@
     this.page = 0
     this._setContainers()
     this.getFeed(this.page)
-
-
-    // add handlers
   }
 
   KamcordVideos.prototype = {
