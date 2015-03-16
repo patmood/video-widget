@@ -57,7 +57,7 @@
     },
 
     render: function() {
-      if (!this.feed.length) return
+      if (!this.feed.length) return;
       var _this = this
       this.feed.forEach(function(video) {
         _this.addVideo(video)
@@ -66,14 +66,14 @@
     },
 
     getFeed: function(page) {
-      // Normally do GET request here
+      // Normally do $.ajax request here and render in the success callback
+      // Hardcoded for simplicity
       this.feed = window.API['page' + page].response.feed_info
       this.render()
       return this
     },
 
     nextPage: function() {
-      console.log ('next page')
       this.page += 1
       this.getFeed(this.page)
       return this
