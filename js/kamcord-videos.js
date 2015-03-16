@@ -23,7 +23,7 @@
       var thumb = vid.thumbnail_urls.small.url
         , templateHTML =
         '<div class="vid-box">' +
-          '<div class="preview shadow">' +
+          '<div class="preview shadow rounded">' +
             '<div class="play-overlay"></div>' +
             '<div class="interaction">' +
               vid.interaction_counts.likes.toLocaleString() + ' likes<br>' +
@@ -99,7 +99,7 @@
     _setContainers: function() {
       var $containers = $(
         '<div class="vid-container"></div>' +
-        '<div class="load-more shadow">Load More...</div>'
+        '<div class="load-more shadow rounded">Load More...</div>'
       )
       this.el.append($containers)
       this.el.find('.load-more').on('click', this.nextPage.bind(this))
